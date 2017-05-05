@@ -9,23 +9,45 @@ body {
   font-family: $body-font;
   box-sizing: border-box;
   text-align: center;
+  overflow-x: hidden;
+}
+//section style
+
+.section-separator {
+  border-bottom: 1px solid #E0E6ED;
 }
 // navbar style
 
 .e-navbar {
   margin: 0;
   padding: 10px 5px;
+  width: 100%;
   list-style: none;
   display: flex;
   position: fixed;
-  width: 100%;
-  box-shadow: 2px 2px 10px 0 #dedede;
+  box-shadow: 2px 2px 10px 0 #E0E6ED;
   transition: all 0.5s ease;
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
-  background-color: #000;
+  background-color: #FAFAFA;
   z-index: 1000;
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    color: #626366;
+    text-decoration: none !important;
+    font-family: $subtitle-font;
+  }
+
+  a:hover{
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
   @include breakpoint(tablet) {
+    font-size: 1.5em;
     justify-content: flex-end;
   }
 }
@@ -33,22 +55,8 @@ body {
 .e-nav-transparent {
   background-color: rgba(255,255,255,0);
   box-shadow: none;
-}
-
-nav {
-  li {
-    display: inline-block;
-  }
-
   a {
-    display: block;
-    padding: 6px 12px;
-    color: #f9f9f9;
-    text-decoration: none;
-    font-family: $subtitle-font;
-    @include breakpoint(tablet) {
-      font-size: 1.3em;
-    }
+    color: #fff;
   }
 }
 //header style
@@ -57,7 +65,7 @@ nav {
   background-image: url("../images/header/bg-img.jpg");
   background-repeat: repeat;
   color: #f9f9f9;
-  box-shadow: 2px 2px 10px 4px #dedede;
+  box-shadow: 2px 2px 5px #dedede;
   padding: 20px;
 }
 
@@ -82,7 +90,6 @@ nav {
 
 .e-area-title {
   font-size: 3em;
-  width: 100%;
   font-family: $subtitle-font;
   font-weight: 800;
 }
@@ -93,6 +100,7 @@ nav {
   height: 200px;
 }
 //skills style
+
 .dev-icons {
   img {
     width: 100px;
@@ -107,15 +115,24 @@ nav {
   animation-duration: 2s;
 }
 //about style
+
+.e-about {
+  align-items: center;
+}
+
 .profile-img {
-  width: 150px;
-  height: auto;
+  height: 200px;
+  width: 200px;
   padding: 0;
 }
-//footer style
 
-.e-footer {
-  height: 60px;
-  background: #000;
-  color: #fff;
+#about .row2 {
+  text-align: left;
+}
+.e-footer{
+  overflow: hidden;
+}
+
+.e-social {
+  justify-content: center;
 }

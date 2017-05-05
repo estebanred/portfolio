@@ -13,25 +13,22 @@
 </head>
 
 <body>
-
   <nav>
-    <ul class="e-navbar e-nav-transparent" id="navmenu">
+    <ul class="e-navbar e-nav-transparent uk-container uk-responsive-width" id="navmenu">
       <li><a href="#homepage">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#about">About</a></li>
     </ul>
   </nav>
-
   <div class="e-header uk-section uk-contain" id="homepage">
     <div class="title-row">
-      <div class="e-main-title">Esteban Rojas</div>
-      <div class="e-sub-title">Web Developer</div>
+      <div class="e-main-title">Title</div>
+      <div class="e-sub-title">Text1</div>
     </div>
   </div>
-
-  <div class="uk-container uk-section" id="projects">
-    <div class="e-area-title">Projects</div>
+  <div class="uk-container uk-section section-separator uk-section-muted" id="projects">
+    <div class="e-area-title uk-padding-small">Projects</div>
     <div class="uk-child-width-1-3@m uk-padding" uk-grid>
       <div>
         <div class="uk-card uk-card-hover uk-card-default">
@@ -77,18 +74,18 @@
       </div>
     </div>
   </div>
-  <div class="uk-section uk-container uk-section-muted" id="skills">
-    <div class="e-area-title">Skills</div>
-    <div class="e-skills uk-grid">
-      <div class="row1 uk-width-1-2">
-        <span>I'm pretty good at this</span>
+  <div class="uk-section uk-container section-separator" id="skills">
+    <div class="e-area-title uk-padding-small">Skills</div>
+    <div class="e-skills uk-child-width-1-2" uk-grid>
+      <div class="row1">
+        <span>I know these tools</span>
         <div class="dev-icons">
           <img src="images/dev-icons/html5.svg" alt="html">
           <img src="images/dev-icons/css3.svg" alt="css">
           <img src="images/dev-icons/javascript.svg" alt="javascript">
         </div>
       </div>
-      <div class="row2 uk-width-1-2">
+      <div class="row2">
         <span>Currently Learning</span>
         <div class="dev-icons">
           <img src="images/dev-icons/nodejs.svg" alt="nodejs">
@@ -98,14 +95,29 @@
       </div>
     </div>
   </div>
-  <div class="uk-section uk-container" id="about">
-    <div class="e-area-title">About</div>
-    <div class="uk-grid uk-align-center">
-      <div class="uk-padding"><img src="images/profile-esteban.jpg" alt="profile" class="profile-img uk-border-circle"></div>
-      <div class="uk-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini </div>
+  <div class="uk-section uk-container section-separator uk-section-muted" id="about">
+    <div class="e-area-title uk-padding-small">About</div>
+    <div class="uk-child-width-1-2@m uk-padding e-about" uk-grid>
+      <div class="row1">
+        <div class="uk-padding"><img src="images/profile-esteban.jpg" alt="profile" class="profile-img uk-border-circle uk-responsive-width"></div>
+      </div>
+      <div class="row2">
+        <div class="uk-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad miniLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad miniLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini</div>
+      </div>
     </div>
   </div>
-  <div class="e-footer">Hi</div>
+  <div class="e-footer uk-section uk-container">
+    <div class="uk-child-width-1-2@m uk-margin-remove" uk-grid>
+      <div>Copyright © 2017 Esteban Rojas</div>
+      <div class="e-social" uk-grid>
+        <a href="#" class="uk-icon-link" uk-icon="icon: github; ratio: 1.5"></a>
+        <a href="#" class="uk-icon-link" uk-icon="icon: linkedin; ratio: 1.5"></a>
+        <a href="#" class="uk-icon-link" uk-icon="icon: mail; ratio: 1.5"></a>
+      </div>
+    </div>
+  </div>
   <script src="js/script.js"></script>
 </body>
 
