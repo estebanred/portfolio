@@ -1,15 +1,12 @@
-
 @import "base/module";
-@import "utils/module";
-
-//general styles
+@import "utils/module"; //general styles
 
 html {
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: $primary-font;
+  font-family: $body-font;
   box-sizing: border-box;
   text-align: center;
 }
@@ -27,7 +24,7 @@ body {
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
   background-color: #000;
-
+  z-index: 1000;
   @include breakpoint(tablet) {
     justify-content: flex-end;
   }
@@ -48,8 +45,9 @@ nav {
     padding: 6px 12px;
     color: #f9f9f9;
     text-decoration: none;
+    font-family: $subtitle-font;
     @include breakpoint(tablet) {
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
   }
 }
@@ -61,12 +59,6 @@ nav {
   color: #f9f9f9;
   box-shadow: 2px 2px 10px 4px #dedede;
   padding: 20px;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.title-row {
-  margin: 85px auto 30px;
 }
 
 .e-main-title {
@@ -91,71 +83,38 @@ nav {
 .e-area-title {
   font-size: 3em;
   width: 100%;
-  margin: 40px auto;
-  font-family: $body-title-font;
-  font-weight: 400;
+  font-family: $subtitle-font;
+  font-weight: 800;
 }
-//projects
-.e-projects{
-}
-.single-proj {
-  @include breakpoint(tablet) {
-    display: flex;
-    margin: 20px auto 30px;
-    max-width: 900px;
-  }
-  overflow: hidden;
-  box-shadow: 2px 2px 10px 0 #dedede;
-  background-image: linear-gradient(#c6c6c6, #fff);
-}
+//projects style
 
-.proj-info {
-  padding: 40px 25px;
+.proj-img {
+  width: 500px;
+  height: 200px;
 }
-
-.proj-info h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
+//skills style
 .dev-icons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.dev-icons img {
-  width: 100px;
-  height: auto;
-  padding: 15px;
-  transition: 0.5s ease;
+  img {
+    width: 100px;
+    height: auto;
+    padding: 15px;
+    transition: 0.5s ease;
+  }
 }
 
 .dev-icons img:hover {
   animation-name: rotate;
   animation-duration: 2s;
 }
-//skills style
-
-.e-skills {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-image: linear-gradient(red, #fff);
-}
-
 //about style
-.e-about{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.profile-img {
+  width: 150px;
+  height: auto;
+  padding: 0;
 }
 //footer style
-.e-footer{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.e-footer {
   height: 60px;
   background: #000;
   color: #fff;

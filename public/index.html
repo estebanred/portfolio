@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Esteban Rojas Web Developer</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="uikit-3.0.0/css/uikit.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="uikit-3.0.0/js/uikit.min.js"></script>
+  <script src="uikit-3.0.0/js/uikit-icons.min.js"></script>
 </head>
 
 <body>
@@ -19,54 +23,89 @@
     </ul>
   </nav>
 
-  <div class="e-header" id="homepage">
+  <div class="e-header uk-section uk-contain" id="homepage">
     <div class="title-row">
       <div class="e-main-title">Esteban Rojas</div>
       <div class="e-sub-title">Web Developer</div>
     </div>
   </div>
 
-  <div class="e-projects" id="projects">
+  <div class="uk-container uk-section" id="projects">
     <div class="e-area-title">Projects</div>
-    <div class="single-proj">
-      <div class="proj-img">
-        <img src="images/project-photo.jpg">
+    <div class="uk-child-width-1-3@m uk-padding" uk-grid>
+      <div>
+        <div class="uk-card uk-card-hover uk-card-default">
+          <div class="uk-card-media-top">
+            <img src="images/project-photo.jpg" alt="" class="proj-img">
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Project1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+          <div class="uk-card-footer">
+            <a href="#" class="uk-button uk-button-text">Read more</a>
+          </div>
+        </div>
       </div>
-      <div class="proj-info">
-        <h2>Project Title</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+      <div>
+        <div class="uk-card uk-card-hover uk-card-default">
+          <div class="uk-card-media-top">
+            <img src="images/project-photo.jpg" alt="" class="proj-img">
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Project2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+          <div class="uk-card-footer">
+            <a href="#" class="uk-button uk-button-text">Read more</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="single-proj">
-      <div class="proj-img">
-        <img src="images/project-photo.jpg">
-      </div>
-      <div class="proj-info">
-        <h2>Project Title</h2>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+      <div>
+        <div class="uk-card uk-card-hover uk-card-default">
+          <div class="uk-card-media-top uk-width-auto">
+            <img src="images/project-photo.jpg" alt="" class="proj-img">
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Project3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+          <div class="uk-card-footer">
+            <a href="#" class="uk-button uk-button-text">Read more</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="e-skills" id="skills">
+  <div class="uk-section uk-container uk-section-muted" id="skills">
     <div class="e-area-title">Skills</div>
-    <div class="dev-icons">
-      <img src="images/dev-icons/html5.svg" alt="html">
-      <img src="images/dev-icons/css3.svg" alt="css">
-      <img src="images/dev-icons/javascript.svg" alt="javascript">
-      <img src="images/dev-icons/nodejs.svg" alt="nodejs">
-      <img src="images/dev-icons/react.svg" alt="react">
-      <img src="images/dev-icons/sass.svg" alt="sass">
+    <div class="e-skills uk-grid">
+      <div class="row1 uk-width-1-2">
+        <span>I'm pretty good at this</span>
+        <div class="dev-icons">
+          <img src="images/dev-icons/html5.svg" alt="html">
+          <img src="images/dev-icons/css3.svg" alt="css">
+          <img src="images/dev-icons/javascript.svg" alt="javascript">
+        </div>
+      </div>
+      <div class="row2 uk-width-1-2">
+        <span>Currently Learning</span>
+        <div class="dev-icons">
+          <img src="images/dev-icons/nodejs.svg" alt="nodejs">
+          <img src="images/dev-icons/react.svg" alt="react">
+          <img src="images/dev-icons/sass.svg" alt="sass">
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="e-about" id="about">
+  <div class="uk-section uk-container" id="about">
     <div class="e-area-title">About</div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini </div>
+    <div class="uk-grid uk-align-center">
+      <div class="uk-padding"><img src="images/profile-esteban.jpg" alt="profile" class="profile-img uk-border-circle"></div>
+      <div class="uk-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini </div>
+    </div>
   </div>
-
   <div class="e-footer">Hi</div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
