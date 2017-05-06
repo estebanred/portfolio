@@ -7,6 +7,7 @@ html {
 
 body {
   font-family: $body-font;
+  color: $primary-color;
   box-sizing: border-box;
   text-align: center;
   overflow-x: hidden;
@@ -40,12 +41,12 @@ body {
     font-family: $subtitle-font;
   }
 
-  a:hover{
+  a:hover {
+    color: #999999;
     animation-name: pulse;
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
-
   @include breakpoint(tablet) {
     font-size: 1.5em;
     justify-content: flex-end;
@@ -55,6 +56,7 @@ body {
 .e-nav-transparent {
   background-color: rgba(255,255,255,0);
   box-shadow: none;
+
   a {
     color: #fff;
   }
@@ -62,36 +64,44 @@ body {
 //header style
 
 .e-header {
-  background-image: url("../images/header/bg-img.jpg");
-  background-repeat: repeat;
+  background: #1e1e21;
+  background-image: radial-gradient(farthest-side at top left,red 0,rgba(0,0,0,0) 100%);
+  background-repeat: no-repeat;
+  background-position: top center;
   color: #f9f9f9;
-  box-shadow: 2px 2px 5px #dedede;
   padding: 20px;
+  height: 100vh;
 }
 
-.e-main-title {
-  font-size: 4em;
+.e-title {
+  font-size: 2em;
   animation-name: pulse;
   animation-duration: 4s;
   animation-delay: 1s;
   animation-iteration-count: infinite;
   padding: 15px;
   font-family: $title-font;
-  font-weight: 800;
+  font-weight: bold;
+  @include breakpoint (tablet) {
+    font-size: 5em;
+  }
 }
 
-.e-sub-title {
-  font-size: 2em;
-  padding: 15px;
-  font-family: $title-font;
-  font-weight: 800;
+.e-title-row2 {
+  font-size: 1em;
+  @include breakpoint (tablet) {
+    font-size: 3em;
+  }
 }
 //main body style
 
 .e-area-title {
-  font-size: 3em;
-  font-family: $subtitle-font;
+  font-size: 2em;
+  font-family: $title-font;
   font-weight: 800;
+  @include breakpoint (tablet) {
+    font-size: 3em;
+  }
 }
 //projects style
 
@@ -100,6 +110,11 @@ body {
   height: 200px;
 }
 //skills style
+
+.e-skills-subtitle {
+  font-size: 1.6em;
+  font-family: $title-font;
+}
 
 .dev-icons {
   img {
@@ -128,8 +143,14 @@ body {
 
 #about .row2 {
   text-align: left;
+  font-size: 1em;
+  line-height: 1.3;
+  @include breakpoint (tablet) {
+    font-size: 1.3em;
+  }
 }
-.e-footer{
+
+.e-footer {
   overflow: hidden;
 }
 
