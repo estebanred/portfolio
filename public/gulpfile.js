@@ -23,9 +23,9 @@ gulp.task('css', function(){
    .pipe(gulp.dest('build/'));
 });
 //Watch task
-gulp.task('default', function(){
-    gulp.watch('sass/**/*.scss',['styles']);
-});
-//minify css and js
-// gulp.task('default',['js','css'],function(){
+// gulp.task('default', function(){
+//     gulp.watch('sass/**/*.scss',['styles']);
 // });
+// minify css and js
+gulp.task('default',['js','css'],function(){
+});
