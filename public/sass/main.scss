@@ -4,13 +4,12 @@
 html {
   -webkit-font-smoothing: antialiased;
 }
-
 body {
-  font-family: $body-font;
   color: $primary-color;
   box-sizing: border-box;
   text-align: center;
   overflow-x: hidden;
+  font-family: $main-font;
 }
 //section style
 
@@ -27,7 +26,8 @@ body {
   display: flex;
   position: fixed;
   box-shadow: 2px 2px 10px 0 #E0E6ED;
-  transition: all 0.5s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
   background-color: #FAFAFA;
@@ -38,7 +38,6 @@ body {
     padding: 6px 12px;
     color: #626366;
     text-decoration: none !important;
-    font-family: $subtitle-font;
   }
 
   a:hover {
@@ -54,8 +53,7 @@ body {
 }
 
 .e-nav-transparent {
-  background-color: rgba(255,255,255,0);
-  box-shadow: none;
+  display: none;
 
   a {
     color: #fff;
@@ -69,21 +67,15 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   color: #f9f9f9;
-  padding: 20px;
   height: 100vh;
 }
 
 .e-title {
   font-size: 2em;
-  animation-name: pulse;
-  animation-duration: 4s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
   padding: 15px;
-  font-family: $title-font;
   font-weight: bold;
   @include breakpoint (tablet) {
-    font-size: 5em;
+    font-size: 3em;
   }
 }
 
@@ -93,11 +85,17 @@ body {
     font-size: 3em;
   }
 }
+
+.e-arrow-down {
+  animation-name: pulse;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
 //main body style
 
 .e-area-title {
   font-size: 2em;
-  font-family: $title-font;
   font-weight: 800;
   @include breakpoint (tablet) {
     font-size: 3em;
@@ -113,7 +111,6 @@ body {
 
 .e-skills-subtitle {
   font-size: 1.6em;
-  font-family: $title-font;
 }
 
 .dev-icons {
