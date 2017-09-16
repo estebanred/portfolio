@@ -6,13 +6,12 @@
   "author": "Esteban Rojas <estered9112@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-clean-css": "^3.8.0",
     "gulp-concat": "^2.6.1",
-    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2"
   },
   "dependencies": {
-
+    "gulp": "^3.9.1"
   }
 }

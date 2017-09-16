@@ -1,8 +1,9 @@
 $(document).ready(function() {
-  //Navbar Animation functions
   $(window).scroll(function() {
     yPos();
   });
+
+  var yHeight = $('.e-header').position().top + $('.e-header').outerHeight() - $('#navmenu').outerHeight();
 
   function yPos() {
     if ($(window).scrollTop() > yHeight) {
@@ -12,14 +13,12 @@ $(document).ready(function() {
     }
   }
 
-  var yHeight = $('.e-header').position().top + $('.e-header').outerHeight() - $('#navmenu').outerHeight();
-
   //Smooth scrolling to anchor
-  $(document).on('click', 'a', function(event) {
+  $(document).on('click', '.anchor-link', function(event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
+    }, 480);
   });
 
 });

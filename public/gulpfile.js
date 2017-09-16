@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var minify = require('gulp-minify-css');
+let cleanCSS = require('gulp-clean-css');
 //convert sass to css
-gulp.task('styles', function() {
+gulp.task('sass', function() {
     gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('./css/'));
 });
 gulp.task('js', function(){
@@ -15,17 +15,11 @@ gulp.task('js', function(){
    .pipe(uglify())
    .pipe(gulp.dest('build/'));
 });
+gulp.task('minify-css', () => {
+    return gulp.src('css/*.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(gulp.dest('build/'));
+  });
 
-gulp.task('css', function(){
-   gulp.src('css/*.css')
-   .pipe(concat('styles.css'))
-   .pipe(minify())
-   .pipe(gulp.dest('build/'));
-});
-//Watch task
-// gulp.task('default', function(){
-//     gulp.watch('sass/**/*.scss',['styles']);
-// });
 // minify css and js
-gulp.task('default',['js','css'],function(){
-});
+gulp.task('default',['js','sass','minify-css'],function(){});
