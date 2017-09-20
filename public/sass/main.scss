@@ -1,6 +1,7 @@
 @import "base/module";
 @import "utils/module"; //general styles
 
+
 html {
   -webkit-font-smoothing: antialiased;
 }
@@ -63,9 +64,7 @@ body {
 //header style
 
 .e-header {
-  background-color: #f3f2f0;
-  background-image: -webkit-linear-gradient(#fff,#f3f2f0);
-  background-image: linear-gradient(#fff,#f3f2f0);
+  background: url("../images/estebanred-bg.jpg");
   height: 100vh;
 }
 
