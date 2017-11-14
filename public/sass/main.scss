@@ -1,8 +1,7 @@
 @import "base/module";
 @import "utils/module"; //general styles
 
-
-html {
+* {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -13,13 +12,13 @@ body {
   overflow-x: hidden;
   font-family: $main-font;
 }
-//section style
 
+//section style
 .section-separator {
   border-bottom: 1px solid #E0E6ED;
 }
-// navbar style
 
+// navbar style
 .e-navbar {
   margin: 0;
   padding: 13px 5px;
@@ -27,22 +26,19 @@ body {
   list-style: none;
   display: flex;
   position: fixed;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
   background-color: #FAFAFA;
   z-index: 1000;
-
   a {
-    display: block;
-    padding: 6px 12px;
     color: #626366;
     text-decoration: none !important;
     text-transform: uppercase;
     font-size: 0.6em;
+    height: 30px;
   }
-
   a:hover {
     animation-name: pulse;
     animation-duration: 1s;
@@ -56,16 +52,38 @@ body {
 
 .e-nav-transparent {
   display: none;
-
   a {
     color: #fff;
   }
 }
-//header style
 
+.anchor-link {
+	height: 25px !important;
+}
+
+.e-menu-icon{
+  font-size: 1.5em;
+}
+
+.e-menu-text {
+	margin: 0 12px;
+}
+
+@include breakpoint(mobile) {
+  span.e-menu-text {
+    display: none;
+  }
+}
+
+//header style
 .e-header {
   background: url("../images/estebanred-bg.jpg");
   height: 100vh;
+}
+
+.e-logo {
+  width: 30px;
+  height: auto;
 }
 
 .e-title {
@@ -73,7 +91,7 @@ body {
   padding: 15px;
   font-weight: 700;
   font-family: $title-font;
-  color: #555555;
+  color: #424141;
   @include breakpoint (tablet) {
     font-size: 4em;
   }
@@ -81,7 +99,7 @@ body {
 
 .e-title-row2 {
   font-size: 1.3em;
-  color: #555555;
+  color: #424141;
   font-family: $title-font;
   @include breakpoint (tablet) {
     font-size: 3em;
@@ -96,8 +114,8 @@ body {
   animation-delay: 1s;
   animation-iteration-count: infinite;
 }
-//main body style
 
+//main body style
 .e-area-title {
   font-size: 2em;
   font-weight: 500;
@@ -107,8 +125,8 @@ body {
     font-size: 2.5em;
   }
 }
-//projects style
 
+//projects style
 #projects .uk-card-body {
   text-align: left;
 }
@@ -121,15 +139,14 @@ body {
   width: 500px;
   height: 200px;
 }
-//skills style
 
+//skills style
 .e-skills-subtitle {
   font-size: 1.6em;
 }
 
 .dev-icons {
   justify-content: center;
-
   p {
     margin: 0;
   }
@@ -145,8 +162,8 @@ body {
   animation-name: rotate;
   animation-duration: 2s;
 }
-//about style
 
+//about style
 .e-about {
   align-items: center;
 }
