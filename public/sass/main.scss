@@ -77,7 +77,7 @@ body {
 
 //header style
 .e-header {
-  background: url("../images/estebanred-bg.jpg");
+  background: #323231;
   height: 100vh;
 }
 
@@ -89,18 +89,17 @@ body {
 .e-title {
   font-size: 2.5em;
   padding: 15px;
-  font-weight: 700;
   font-family: $title-font;
-  color: #424141;
+  color: #fff;
   @include breakpoint (tablet) {
-    font-size: 4em;
+    font-size: 5em;
+    font-weight: 600;
   }
 }
 
 .e-title-row2 {
   font-size: 1.3em;
-  color: #424141;
-  font-family: $title-font;
+  color: #569AFF;
   @include breakpoint (tablet) {
     font-size: 3em;
     font-weight: 500;
@@ -193,4 +192,8 @@ body {
 
 .e-social {
   justify-content: center;
+}
+
+#particles-js{
+  height: 100%;
 }

@@ -27,7 +27,7 @@ gulp.task("sass", function () {
 
 //minify js
 gulp.task("minifyjs", function () {
-    return gulp.src("./public/js/**/*.js")
+    return gulp.src("./public/js/*.js")
         .pipe(concat("script.js"))
         .pipe(uglify())
         .pipe(gulp.dest("./public/build"))
